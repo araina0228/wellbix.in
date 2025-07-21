@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellBix: Bite into Wellness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --beige: #f8f1ea;
+      --brown: #c48e7a;
+      --dark-brown: #7a4f3a;
+      --accent: #fff6f0;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--beige);
+      color: var(--dark-brown);
+    }
+    nav {
+      background: var(--accent);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--brown);
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--dark-brown);
+    }
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 1.5rem;
+    }
+    .brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8rem;
+      color: var(--brown);
+      margin-bottom: 0.5rem;
+    }
+    .tagline {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .intro {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .launch {
+      font-size: 1.1rem;
+      color: var(--dark-brown);
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+    .about {
+      background: var(--accent);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      margin-bottom: 2rem;
+    }
+    .about h2 {
+      color: var(--brown);
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .flavours {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .flavour-card {
+      background: var(--beige);
+      border: 2px solid var(--brown);
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 1.5rem 1.2rem;
+      width: 260px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .flavour-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(196,142,122,0.10);
+    }
+    .flavour-title {
+      font-family: 'Pacifico', cursive;
+      color: var(--brown);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .flavour-desc {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    .signup {
+      background: var(--accent);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 2.5rem;
+    }
+    .signup h2 {
+      color: var(--brown);
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .signup-form input {
+      padding: 0.7rem 1rem;
+      border: 1.5px solid var(--brown);
+      border-radius: 0.7rem;
+      font-size: 1rem;
+      width: 250px;
+      background: var(--beige);
+    }
+    .signup-form button {
+      padding: 0.7rem 1.5rem;
+      background: var(--brown);
+      color: #fff;
+      border: none;
+      border-radius: 0.7rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .signup-form button:hover {
+      background: var(--dark-brown);
+    }
+    .contact {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .contact a {
+      color: var(--brown);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    .contact a:hover {
+      color: var(--dark-brown);
+    }
+    footer {
+      text-align: center;
+      padding: 1.2rem 0 0.7rem 0;
+      color: var(--brown);
+      font-size: 0.95rem;
+      background: var(--accent);
+      border-top: 1px solid #e0cfc2;
+    }
+    @media (max-width: 800px) {
+      .flavours {
+        flex-direction: column;
+        align-items: center;
+      }
+      .flavour-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#flavours">Flavours</a></li>
+      <li><a href="#signup">Signup</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="section hero" id="home">
+    <img src="logo.png" alt="WellBix Logo" class="hero-logo">
+    <div class="brand">WellBix</div>
+    <div class="tagline">Bite into Wellness</div>
+    <div class="intro">Meet WellBix – where wellness meets indulgence! Affordable and nutritious protein biscuits are coming soon.</div>
+    <div class="launch">Launching in August 2025</div>
+    <div class="intro">We sell offline as well as online on orders.</div>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>About WellBix</h2>
+    <p>WellBix biscuits are <b>gluten-free</b>, packed with protein, nuts, and natural jaggery. We believe in making wellness accessible and affordable, without compromising on taste. Our biscuits are crafted for everyone who values health, flavor, and quality ingredients.</p>
+  </section>
+
+  <section class="section" id="flavours">
+    <h2 style="color: var(--brown); font-family: 'Pacifico', cursive; font-size: 2rem; text-align:center; margin-bottom:2rem;">Our Flavours</h2>
+    <div class="flavours">
+      <div class="flavour-card">
+        <div class="flavour-title">Chocolate Protein Biscuit</div>
+        <div class="flavour-desc">Rich chocolate taste, high in protein, contains <b>whey protein</b> for muscle support and energy.</div>
+      </div>
+      <div class="flavour-card">
+        <div class="flavour-title">Coconut Biscuit</div>
+        <div class="flavour-desc">Tropical coconut flavor, protein-packed, contains <b>whey protein</b> for a healthy snack anytime.</div>
+      </div>
+      <div class="flavour-card">
+        <div class="flavour-title">Fruit & Nuts Biscuit</div>
+        <div class="flavour-desc">Loaded with real fruits and nuts, <b>without whey protein</b> – perfect for older adults and kids.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section signup" id="signup">
+    <h2>Sign Up for Updates</h2>
+    <p>Be the first to know when WellBix launches! Enter your details below:</p>
+    <form class="signup-form" onsubmit="event.preventDefault(); document.getElementById('signup-success').style.display='block'; this.reset();">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Notify Me</button>
+    </form>
+    <div id="signup-success" style="display:none; color: var(--brown); font-weight:700; margin-top:1rem;">Thank you for signing up! We'll keep you posted.</div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2 style="color: var(--brown); font-family: 'Pacifico', cursive; font-size: 2rem; margin-bottom:0.5rem;">Contact Us</h2>
+    <p>Follow us on Instagram: <a href="https://www.instagram.com/wellbix.in?igsh=c3ozY2pjZHpuNnFv" target="_blank">@wellbix.in</a></p>
+  </section>
+
+  <footer>
+    &copy; 2024 WellBix. All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
